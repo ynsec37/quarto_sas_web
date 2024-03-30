@@ -9,9 +9,7 @@ jupyter: sas
 self-contained: true
 ---
 
-<!--
-reset the style from SAS html output
--->
+<!-- reset the style from SAS html output -->
 ```{=html}
 <style>
 
@@ -27,8 +25,20 @@ nav.navbar.navbar-expand-lg {
 #quarto-content {
   background-color: #fff !important;
 }
+
+.sas-cell-hidden {
+  display: none;
+}
+
 </style>
 ```
+
+<!-- custom the div class to support `echo=false` -->
+::: {.sas-cell-hidden}
+```{sas}
+options locale=en_US;
+```
+::: 
 
 ::: panel-tabset
 ## data
@@ -60,7 +70,6 @@ data one;
 ;
 run;
 
-title;
 proc print noobs; run;
 ```
 
