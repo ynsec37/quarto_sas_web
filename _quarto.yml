@@ -1,0 +1,24 @@
+project:
+  type: website
+  
+execute:
+  freeze: auto
+  
+website:
+  title: "quatro_sas_web"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: sas.qmd
+        text: SAS
+      - about.qmd
+      
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
